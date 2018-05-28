@@ -8,25 +8,25 @@ In the unordered version of the problem, the reward to the learning algorithm is
 
 In the ordered slate problem, the adversary specifies a reward for using an action in a specific position. The reward to the learner then is the sum of the rewards of the (actions, position) pairs in the chosen ordered slate.
 
-Sample code to run the bandit algorithms. More can be found in the folder TestEnvironment.
+Sample code to run the bandit algorithms is given below. More can be found in the folder TestEnvironment.
 ```python
 import UnorderedSlatesBandit as unordered
 import OrderedSlatesBandit as ordered
 import numpy as np
 import math
 
-# use either the ordered or unordered bandit.
+# use the bandit algo. with either the ordered or unordered slates.
 agent = unordered.UnorderedSlatesBandit(actions, slate_size, rounds)
 # agent = ordered.OrderedSlatesBandit(actions, slate_size, rounds)
 
-# set up the environment function which will give rewards to player.
-# environment function should take a slate indicator vector or slate-position indicator matrix as input
-# and return a loss/reward vector/matrix of equal dimensions of input.
+# set up the environment function which will reward/punish the agent.
+# environment function should take a slate indicator vector or slate-position subpermutation matrix as input
+# and return a loss/reward vector/matrix of dimensions that equal input vector(size K) or input matrix(shape (s,K)).
 agent.set_environment(environment.get_blind_loss)
 
 # run the agent for 'rounds' times.
 agent.iterate_agent()
 
 # environment is responsible of storing best_fixed_slate_data
-print("\nagent reward: {0} vs best slate reward: {1}".format(-np.sum(agent.loss_vs_rounds), -   np.sum(environment.best_slate_vs_rounds)))
+print("\nagent total reward: {0} vs best fixed slate total reward: {1}".format(-np.sum(agent.loss_vs_rounds), -   np.sum(environment.best_slate_vs_rounds)))
 ```
