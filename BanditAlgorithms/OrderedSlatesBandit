@@ -82,7 +82,7 @@ class OrderedSlatesBandit:
             #using the environment class get the loss vector for the chosen slate, and push the loss to mw algorithm
             #to get new distribution
 
-            loss_vector = self.environment.get_blind_loss_ordered(chosen_slate, self.round)
+            loss_vector = self.environment(chosen_slate, self.round)
 
             round_loss = loss_vector.sum()
             self.loss_vs_rounds[self.round] = round_loss
