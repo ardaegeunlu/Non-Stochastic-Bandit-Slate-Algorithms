@@ -15,9 +15,13 @@ Sample plots that are obtained using the Environment class in TestEnvironment fo
 [-0.4, 0.4].
 ![alt text](https://raw.githubusercontent.com/ardaegeunlu/Non-Stochastic-Bandit-Slate-Problems/master/Figures/Figure_0.png)
 ![alt text](https://raw.githubusercontent.com/ardaegeunlu/Non-Stochastic-Bandit-Slate-Problems/master/Figures/Figure_1.png)
+
+
 -> For the ordered case, each arm is again associated with a normal probability distribution with a mean between
 [-0.4, 0.4] and std = 0.3. The mean is selected at start from a uniform random distribution from the range of
 [-0.4, 0.4]. First action chosen has a multiplier of 1, second action chosen has a multiplier of 1.1, third has a multiplier of 1.2 and so on. Therefore successive positions have increasing importance.
+![alt text](https://raw.githubusercontent.com/ardaegeunlu/Non-Stochastic-Bandit-Slate-Problems/master/Figures/ordered1.png)
+![alt text](https://raw.githubusercontent.com/ardaegeunlu/Non-Stochastic-Bandit-Slate-Problems/master/Figures/ordered2.png)
 
 Sample code to run the bandit algorithms is given below. More can be found in the folder TestEnvironment.
 ```python
