@@ -94,8 +94,8 @@ def mixture_decomposition_ordered_stateless(slate_size, total_number_of_actions,
 
     """
     :param slate_size: slate size, s.
-    :param total_number_of_actions: number of actions that the slate will be formed from, K.
-    :param matrix_to_be_decomposed: the scaled probability matrix of position, action pairs.
+    :param total_number_of_actions: number of the pairs in matrix s*K.
+    :param matrix_to_be_decomposed: flattened scaled probability matrix of position, action pairs.
     :return: if successful: list of decomposed matrix-probability pairs, else: False.
     """
     # this algorithm uses the ideas in mixture decomposition and try to generalize them to a matrix.
