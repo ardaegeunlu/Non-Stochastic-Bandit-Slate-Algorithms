@@ -1,4 +1,4 @@
-# Non-Stochastic-Bandit-Slate-Problems
+# Non-Stochastic-Bandit-Slate-Algorithms
 Implementations of the bandit algorithms with unordered and ordered slates that are described in the paper "Non-Stochastic Bandit Slate Problems", by Kale et al. 2010.
 
 We consider bandit problems, motivated by applications in online advertising and news story selection, in which the learner must repeatedly select a slate, that is, a subset of size s from K possible actions, and then receives rewards for just the
