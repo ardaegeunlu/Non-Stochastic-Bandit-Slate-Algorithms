@@ -9,7 +9,7 @@ In the unordered version of the problem, the reward to the learning algorithm is
 In the ordered slate problem, the adversary specifies a reward for using an action in a specific position. The reward to the learner then is the sum of the rewards of the (actions, position) pairs in the chosen ordered slate.
 
 Sample code to run the bandit algorithms. More can be found in the folder TestEnvironment.
-```
+```python
 import UnorderedSlatesBandit as unordered
 import OrderedSlatesBandit as ordered
 import numpy as np
