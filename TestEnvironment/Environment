@@ -47,12 +47,7 @@ class Environment:
         np.clip(ordered_loss, -1, 1, ordered_loss)
 
         self.best_slate_vs_rounds_ordered = np.sum(ordered_loss, axis=1)
-        self.best_slate_loss = np.sum((np.sort(action_rewards)[0:slate_size]))
-
-        self.best_slate_loss_ordered = np.sum(self.best_slate_vs_rounds_ordered)
-        # print("best slate is {0}".format(self.best_slate))
-        return
-
+        
 
     def get_blind_loss(self, slate_indicator, round_no):
 
