@@ -45,4 +45,4 @@ agent.iterate_agent()
 # environment is responsible of storing best_fixed_slate_data
 print("\nagent total reward: {0} vs best fixed slate total reward: {1}".format(-np.sum(agent.loss_vs_rounds), -   np.sum(environment.best_slate_vs_rounds)))
 ```
-¹ Non-Stochastic Bandit Slate Problems;Kale, Reyzin, Schapire; 2010.
+¹ Non-Stochastic Bandit Slate Problems; Kale, Reyzin, Schapire; 2010.
