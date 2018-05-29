@@ -42,7 +42,8 @@ agent.set_environment(environment.get_blind_loss)
 # run the agent for 'rounds' times.
 agent.iterate_agent()
 
-# environment is responsible of storing best_fixed_slate_data
-print("\nagent total reward: {0} vs best fixed slate total reward: {1}".format(-np.sum(agent.loss_vs_rounds), -   np.sum(environment.best_slate_vs_rounds)))
+# environment is responsible of storing best_fixed_slate_data. (losses are defined as positive numbers while all rewards
+# are defined as negative, thus the minus sign before agent.loss_vs_rounds.)
+print("\nagent total reward: {0} vs best fixed slate total reward: {1}".format(-np.sum(agent.loss_vs_rounds), -np.sum(environment.best_slate_vs_rounds)))
 ```
 ¹ Non-Stochastic Bandit Slate Problems; Kale, Reyzin, Schapire; 2010.
