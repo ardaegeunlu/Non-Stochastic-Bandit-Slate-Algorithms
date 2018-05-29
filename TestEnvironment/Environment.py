@@ -13,6 +13,9 @@ import numpy as np
     [-0.4, 0.4] and std = 0.3. The mean is selected at start from a uniform random distribution from the range of
     [-0.4, 0.4]. First action chosen has a multiplier of 1, second action chosen has a multiplier of 1.1, third has a multiplier of 1.2
     and so on. One can use the get_blind_loss_ordered(slate_indicator_matrix, round) as environment function.
+    
+    !! IMPORTANT NOTE: the returned reward/loss needs to be in the range of [-1,1] and positive numbers are defined as
+    loss while negative numbers are defined as rewards.
 """
 
 
