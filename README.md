@@ -1,4 +1,7 @@
 # Non-Stochastic-Bandit-Slate-Algorithms
+
+## Introduction
+
 Implementations of the bandit algorithms with unordered and ordered slates that are described in the paper "Non-Stochastic Bandit Slate Problems", by Kale et al. 2010.
 
 We consider bandit problems, motivated by applications in online advertising and news story selection, in which the learner must repeatedly select a slate, that is, a subset of size s from K possible actions, and then receives rewards for just the
@@ -7,6 +10,8 @@ selected actions. The goal is to minimize the regret with respect to total rewar
 In the unordered version of the problem, the reward to the learning algorithm is the sum of the rewards of the chosen actions in the slate. So the chosen actions all have a weight of 1 and therefore they are “unordered”. 
 
 In the ordered slate problem, the adversary specifies a reward for using an action in a specific position. The reward to the learner then is the sum of the rewards of the (actions, position) pairs in the chosen ordered slate.
+
+## Results
 
 Sample plots that are obtained using the Environment class in TestEnvironment folder is given below. 
 
@@ -23,6 +28,7 @@ Sample plots that are obtained using the Environment class in TestEnvironment fo
 ![alt text](https://raw.githubusercontent.com/ardaegeunlu/Non-Stochastic-Bandit-Slate-Problems/master/Figures/ordered1.png)
 ![alt text](https://raw.githubusercontent.com/ardaegeunlu/Non-Stochastic-Bandit-Slate-Problems/master/Figures/ordered2.png)
 
+## Sample Code
 Sample code to run the bandit algorithms is given below. More can be found in the folder TestEnvironment.
 ```python
 import UnorderedSlatesBandit as unordered
@@ -46,4 +52,5 @@ agent.iterate_agent()
 # are defined as negative, thus the minus sign before agent.loss_vs_rounds.)
 print("\nagent total reward: {0} vs best fixed slate total reward: {1}".format(-np.sum(agent.loss_vs_rounds), -np.sum(environment.best_slate_vs_rounds)))
 ```
+## References
 ¹S. Kale, L. Reyzin, and R. Schapire. Non-Stochastic Bandit Slate Problems. Advances in Neural Information Processing Systems 23. 2010.
