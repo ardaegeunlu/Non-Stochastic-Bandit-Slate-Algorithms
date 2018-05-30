@@ -46,4 +46,4 @@ agent.iterate_agent()
 # are defined as negative, thus the minus sign before agent.loss_vs_rounds.)
 print("\nagent total reward: {0} vs best fixed slate total reward: {1}".format(-np.sum(agent.loss_vs_rounds), -np.sum(environment.best_slate_vs_rounds)))
 ```
-¹ Non-Stochastic Bandit Slate Problems; Kale, Reyzin, Schapire; 2010.
+¹S. Kale, L. Reyzin, and R. Schapire. Non-Stochastic Bandit Slate Problems. Advances in Neural Information Processing Systems 23. 2010.
